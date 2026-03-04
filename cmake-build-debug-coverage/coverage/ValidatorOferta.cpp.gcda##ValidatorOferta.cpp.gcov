@@ -1,0 +1,126 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/Validator/ValidatorOferta.cpp
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Validator/ValidatorOferta.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Validator/ValidatorOferta.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alxma on 4/25/2025.
+        -:    3://
+        -:    4:
+        -:    5:#include "ValidatorOferta.h"
+        -:    6:
+function _ZN15ValidatorOferta15valideazaOfertaERK6Oferta called 15 returned 80% blocks executed 89%
+       15:    7:void ValidatorOferta::valideazaOferta(const Oferta &oferta) {
+       15:    8:    string erori="";
+       15:    8-block  0
+call    0 returned 15
+call    1 returned 15
+branch  2 taken 15 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:    8-block  1
+       15:    9:    if (oferta.getDestinatie() == "")
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:    9-block  0
+call    3 returned 15
+call    4 returned 15
+branch  5 taken 3 (fallthrough)
+branch  6 taken 12
+        3:   10:        erori += "Destinatia trebuie sa fie nevida!\n";
+        3:   10-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   11:    if (oferta.getDenumire() == "")
+       15:   11-block  0
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   11-block  1
+call    3 returned 15
+call    4 returned 15
+branch  5 taken 3 (fallthrough)
+branch  6 taken 12
+        3:   12:        erori += "Denumirea trebuie sa fie nevida!\n";
+        3:   12-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   13:    if (oferta.getTip() == "")
+       15:   13-block  0
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   13-block  1
+call    3 returned 15
+call    4 returned 15
+branch  5 taken 3 (fallthrough)
+branch  6 taken 12
+        3:   14:        erori += "Tipul trebuie sa fie nevid!\n";
+        3:   14-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   15:    if (oferta.getPret() < 0)
+       15:   15-block  0
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   15-block  1
+branch  3 taken 3 (fallthrough)
+branch  4 taken 12
+        3:   16:        erori += "Pretul trebuie sa fie un numar pozitiv!\n";
+        3:   16-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   17:    if (oferta.getId() < 0 || floor(oferta.getId()) != oferta.getId())
+       15:   17-block  0
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   17-block  1
+branch  3 taken 12 (fallthrough)
+branch  4 taken 3
+       12:   17-block  2
+call    5 returned 12
+branch  6 taken 12 (fallthrough)
+branch  7 taken 0 (throw)
+       12:   17-block  3
+call    8 returned 12
+call    9 returned 12
+branch 10 taken 12 (fallthrough)
+branch 11 taken 0 (throw)
+       12:   17-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 12
+        3:   17-block  5
+       12:   17-block  6
+       15:   17-block  7
+branch 14 taken 3 (fallthrough)
+branch 15 taken 12
+        3:   18:        erori += "Id-ul trebuie sa fie un numar natural!\n";
+        3:   18-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   19:    if (!erori.empty())
+       15:   19-block  0
+call    0 returned 15
+branch  1 taken 3 (fallthrough)
+branch  2 taken 12
+        3:   20:        throw ValidationError(erori);
+        3:   20-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   20-block  1
+call    4 returned 3
+    $$$$$:   20-block  2
+call    5 never executed
+       15:   21:}
+       12:   21-block  0
+call    0 returned 12
+        3:   21-block  1
+call    1 returned 3

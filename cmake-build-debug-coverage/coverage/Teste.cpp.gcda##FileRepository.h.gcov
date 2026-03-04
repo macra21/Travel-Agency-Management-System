@@ -1,0 +1,256 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/Repository/FileRepository.h
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Teste/Teste.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Teste/Teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alxma on 4/26/2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef FILEREPOSITORY_H
+        -:    6:#define FILEREPOSITORY_H
+        -:    7:#include <fstream>
+        -:    8:
+        -:    9:#include "Repository.h"
+        -:   10:/// @tparam TElem trebuie sa aiba functiile lineToTElem() si TElemToLine()
+        -:   11:/// pentru a asigura citirea si scrierea corecta in fisiere, mentinant abstractia
+        -:   12:template<typename TElem>
+        -:   13:class FileRepository : public Repository<TElem>{
+        -:   14:private:
+        -:   15:    string filename;
+        -:   16:
+        -:   17:    /* --- Operatii fisiere --- */
+        -:   18:
+function _ZN14FileRepositoryI6OfertaE12loadFromFileEv called 3 returned 100% blocks executed 71%
+        3:   19:    void loadFromFile() {
+        3:   20:        ifstream fin(this->filename);
+        3:   20-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   21:        if (!fin.is_open()) {
+        3:   21-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   21-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 2
+        1:   22:            Repository<TElem>::repoSetAllElems({});
+        1:   22-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   22-block  1
+call    4 returned 1
+    $$$$$:   22-block  2
+call    5 never executed
+    $$$$$:   22-block  3
+        1:   23:            return;
+        -:   24:        }
+        -:   25:
+        2:   26:        string line;
+        2:   26-block  0
+call    0 returned 2
+        2:   27:        vector<TElem> elems;
+call    0 returned 2
+        8:   28:        while (getline(fin, line)) {
+        3:   28-block  0
+call    0 returned 3
+        5:   28-block  1
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:   28-block  2
+call    4 returned 5
+branch  5 taken 5 (fallthrough)
+branch  6 taken 0 (throw)
+        5:   28-block  3
+branch  7 taken 3
+branch  8 taken 2 (fallthrough)
+    $$$$$:   28-block  4
+call    9 never executed
+        3:   29:            TElem elem = TElem::lineToTElem(line);
+        3:   29-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   30:            elems.push_back(elem);
+        3:   30-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   31:        }
+        2:   32:        Repository<TElem>::repoSetAllElems(elems);
+        2:   32-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   33:        fin.close();
+        2:   33-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   34:    }
+        2:   34-block  0
+call    0 returned 2
+call    1 returned 2
+        3:   34-block  1
+call    2 returned 3
+branch  3 taken 2 (fallthrough)
+branch  4 taken 1
+    $$$$$:   34-block  2
+call    5 never executed
+    $$$$$:   34-block  3
+call    6 never executed
+    $$$$$:   34-block  4
+call    7 never executed
+        -:   35:
+function _ZN14FileRepositoryI6OfertaE11storeToFileEv called 9 returned 100% blocks executed 68%
+        9:   36:    void storeToFile() {
+        9:   37:        ofstream fout(this->filename);
+        9:   37-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   38:        
+       20:   39:        for (const auto& elem: Repository<TElem>::repoGetAllElems()) {
+        9:   39-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   39-block  1
+call    3 returned 9
+call    4 returned 9
+       11:   39-block  2
+call    5 returned 11
+       11:   39-block  3
+call    6 returned 11
+call    7 returned 11
+       20:   39-block  4
+call    8 returned 20
+branch  9 taken 11
+branch 10 taken 9 (fallthrough)
+        9:   39-block  5
+call   11 returned 9
+    $$$$$:   39-block  6
+call   12 never executed
+    $$$$$:   39-block  7
+call   13 never executed
+       11:   40:            string line = TElem::TElemToLine(elem);
+call    0 returned 11
+branch  1 taken 11 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   41:            fout << line << endl;
+       11:   41-block  0
+call    0 returned 11
+branch  1 taken 11 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   41-block  1
+call    3 returned 11
+branch  4 taken 11 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   42:        }
+        9:   43:        fout.close();
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   44:    }
+        9:   44-block  0
+call    0 returned 9
+    $$$$$:   44-block  1
+call    1 never executed
+        -:   45:public:
+        -:   46:    /* --- Constructors --- */
+function _ZN14FileRepositoryI6OfertaEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 62%
+        3:   47:    explicit FileRepository(const string& filenameX):Repository<TElem>(),filename{filenameX} {
+        3:   47-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   48:        this->loadFromFile();
+        3:   48-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   49:    }
+        3:   49-block  0
+    $$$$$:   49-block  1
+call    0 never executed
+    $$$$$:   49-block  2
+call    1 never executed
+        -:   50:
+        -:   51:    /* --- Destructors --- */
+        -:   52:
+       3*:   53:    ~FileRepository() override {
+        3:   54:        this->storeToFile();
+       3*:   55:    }
+------------------
+_ZN14FileRepositoryI6OfertaED0Ev:
+function _ZN14FileRepositoryI6OfertaED0Ev called 0 returned 0% blocks executed 0%
+    #####:   53:    ~FileRepository() override {
+        -:   54:        this->storeToFile();
+    #####:   55:    }
+    %%%%%:   55-block  0
+call    0 never executed
+call    1 never executed
+------------------
+_ZN14FileRepositoryI6OfertaED2Ev:
+function _ZN14FileRepositoryI6OfertaED2Ev called 3 returned 100% blocks executed 100%
+        3:   53:    ~FileRepository() override {
+        3:   54:        this->storeToFile();
+        3:   55:    }
+        3:   55-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+------------------
+        -:   56:
+        -:   57:    /* --- Operatii CRUD --- */
+        -:   58:
+function _ZN14FileRepositoryI6OfertaE14repoAdaugaElemERKS0_ called 2 returned 100% blocks executed 100%
+        2:   59:    void repoAdaugaElem(const TElem& elemX) override {
+        2:   60:        Repository<TElem>::repoAdaugaElem(elemX);
+        2:   60-block  0
+call    0 returned 2
+        2:   61:        this->storeToFile();
+call    0 returned 2
+        2:   62:    }
+        -:   63:
+function _ZN14FileRepositoryI6OfertaE16repoModificaElemERKS0_ called 1 returned 100% blocks executed 100%
+        1:   64:    void repoModificaElem(const TElem& elemX) override {
+        1:   65:        Repository<TElem>::repoModificaElem(elemX);
+        1:   65-block  0
+call    0 returned 1
+        1:   66:        this->storeToFile();
+call    0 returned 1
+        1:   67:    }
+function _ZN14FileRepositoryI6OfertaE13repoCautaElemEi called 1 returned 100% blocks executed 100%
+        1:   68:    TElem repoCautaElem(int id) override {
+        1:   69:        return Repository<TElem>::repoCautaElem(id);
+        1:   69-block  0
+call    0 returned 1
+        -:   70:    }
+function _ZN14FileRepositoryI6OfertaE14repoStergeElemEi called 1 returned 100% blocks executed 100%
+        1:   71:    void repoStergeElem(int id) override {
+        1:   72:        Repository<TElem>::repoStergeElem(id);
+        1:   72-block  0
+call    0 returned 1
+        1:   73:        this->storeToFile();
+call    0 returned 1
+        1:   74:    }
+        -:   75:
+        -:   76:    /* --- Operatii extra --- */
+        -:   77:
+function _ZN14FileRepositoryI6OfertaE15repoSetAllElemsERKSt6vectorIS0_SaIS0_EE called 2 returned 100% blocks executed 100%
+        2:   78:    void repoSetAllElems(const vector<TElem>& elemsX) override {
+        2:   79:        Repository<TElem>::repoSetAllElems(elemsX);
+        2:   79-block  0
+call    0 returned 2
+        2:   80:        this->storeToFile();
+call    0 returned 2
+        2:   81:    }
+        -:   82:};
+        -:   83:
+        -:   84:#endif //FILEREPOSITORY_H

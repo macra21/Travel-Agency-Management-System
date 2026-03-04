@@ -1,0 +1,109 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/Repository/Repository.h
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Service/ServiceCos/ServiceCos.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Service/ServiceCos/ServiceCos.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alxma on 4/25/2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef REPOSITORY_H
+        -:    6:#define REPOSITORY_H
+        -:    7:#include <vector>
+        -:    8:#include "Exceptii.h"
+        -:    9:using namespace std;
+        -:   10:
+        -:   11:/// @brief Repository generic CRUD pentru elemente cu ID.
+        -:   12:/// @tparam TElem
+        -:   13:///   - Trebuie să expună metoda `int getId() const`
+        -:   14:///   - Trebuie să aiba cosntructor prin copiere si constructor prin asignare
+        -:   15:template<typename TElem>
+        -:   16:class Repository {
+        -:   17:private:
+        -:   18:    vector<TElem> elems;
+        -:   19:public:
+        -:   20:    /* --- Destructor ---*/
+        -:   21:    /// pt salvare date in FileRepository
+        -:   22:
+        -:   23:    virtual ~Repository() = default;
+        -:   24:
+        -:   25:    /* --- Operatii CRUD --- */
+        -:   26:
+        -:   27:    /// Adauga un element nou, daca nu exista un element cu acelasi id in repository
+        -:   28:    /// @param elemX Elementul ce se adauga
+        -:   29:    /// @throw RepoError cu mesajul "Elementul de tip TElem exista deja in repository daca elementul exista deja in repository!\n", daca deja exista un element cu acelasi id in repository
+        -:   30:    virtual void repoAdaugaElem(const TElem& elemX){
+        -:   31:        for (const auto& elem: elems)
+        -:   32:            if (elem.getId() == elemX.getId())
+        -:   33:                throw RepoError("Deja exista un element salvat, cu id-ul " + to_string(elemX.getId()) + "!\n");
+        -:   34:        elems.push_back(elemX);
+        -:   35:    }
+        -:   36:
+        -:   37:    /// Modifica un element daca e existent in repository
+        -:   38:    /// @param elemX Elementul cu care este modificat vechiul element
+        -:   39:    /// @throw RepoError cu mesajul "Nu exista niciun element de tip TElem, cu id-ul elemX.getId()!\n", daca nu exista un element cu acelasi id in repository
+        -:   40:    virtual void repoModificaElem(const TElem& elemX) {
+        -:   41:        for (auto& elem: elems)
+        -:   42:            if (elem.getId() == elemX.getId()) {
+        -:   43:                elem = elemX;
+        -:   44:                return;
+        -:   45:            }
+        -:   46:        throw RepoError("Nu exista niciun element, cu id-ul " + to_string(elemX.getId()) + "!\n");
+        -:   47:    }
+        -:   48:
+        -:   49:    /// Cauta un element in repository dupa id
+        -:   50:    /// @param id id-ul elementului cautat
+        -:   51:    /// @return Elementul gasit
+        -:   52:    /// @throw RepoError cu mesajul "Nu exista niciun element de tip TElem, cu id-ul elemX.getId()!\n", daca nu exista un element cu acelasi id in repository
+        -:   53:    virtual TElem repoCautaElem(int id) {
+        -:   54:        /*for (const auto& elem : elems)
+        -:   55:            if (elem.getId() == id)
+        -:   56:                return elem;*/
+        -:   57:
+        -:   58:        auto it = find_if(this->elems.begin(), this->elems.end(),
+        -:   59:                         [id](const TElem& elem) {
+        -:   60:                             return elem.getId() == id;
+        -:   61:                         });
+        -:   62:
+        -:   63:        if (it != elems.end()) {
+        -:   64:            return *it;
+        -:   65:        }
+        -:   66:
+        -:   67:        throw RepoError("Nu exista niciun element, cu id-ul " + to_string(id) + "!\n");
+        -:   68:    }
+        -:   69:
+        -:   70:    /// Sterge un element din repository dupa id
+        -:   71:    /// @param id id-ul elementului de sters
+        -:   72:    /// @throw RepoError cu mesajul "Nu exista niciun element de tip TElem, cu id-ul elemX.getId()!\n", daca nu exista un element cu acelasi id in repository
+        -:   73:    virtual void repoStergeElem(int id) {
+        -:   74:        for (auto it = elems.begin(); it != elems.end(); ++it) {
+        -:   75:            if (it->getId() == id) {
+        -:   76:                elems.erase(it);
+        -:   77:                return;
+        -:   78:            }
+        -:   79:        }
+        -:   80:        throw RepoError("Nu exista niciun element, cu id-ul " + to_string(id) + "!\n");
+        -:   81:    }
+        -:   82:
+        -:   83:    /* --- Operatii extra --- */
+        -:   84:
+        -:   85:    /// Returneaza toate elementele din repository
+function _ZN10RepositoryI6OfertaE15repoGetAllElemsEv called 0 returned 0% blocks executed 0%
+    #####:   86:    vector<TElem> repoGetAllElems() {
+    #####:   87:        return this->elems;
+    %%%%%:   87-block  0
+call    0 never executed
+        -:   88:    }
+        -:   89:
+        -:   90:    /// Elementele din repository devin elemsX
+        -:   91:    /// @param elemsX noile elemente din repository
+        -:   92:    virtual void repoSetAllElems(const vector<TElem>& elemsX) {
+        -:   93:        this->elems = elemsX;
+        -:   94:    }
+        -:   95:
+        -:   96:    /// Returneaza numarul de elemente din repository
+        -:   97:    int repoGetSize() {
+        -:   98:        return this->elems.size();
+        -:   99:    }
+        -:  100:};
+        -:  101:
+        -:  102:#endif //REPOSITORY_H

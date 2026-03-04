@@ -1,0 +1,368 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/Repository/Repository.h
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Teste/Teste.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Teste/Teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alxma on 4/25/2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef REPOSITORY_H
+        -:    6:#define REPOSITORY_H
+        -:    7:#include <vector>
+        -:    8:#include "Exceptii.h"
+        -:    9:using namespace std;
+        -:   10:
+        -:   11:/// @brief Repository generic CRUD pentru elemente cu ID.
+        -:   12:/// @tparam TElem
+        -:   13:///   - Trebuie să expună metoda `int getId() const`
+        -:   14:///   - Trebuie să aiba cosntructor prin copiere si constructor prin asignare
+        -:   15:template<typename TElem>
+        -:   16:class Repository {
+        -:   17:private:
+        -:   18:    vector<TElem> elems;
+        -:   19:public:
+        -:   20:    /* --- Destructor ---*/
+        -:   21:    /// pt salvare date in FileRepository
+        -:   22:
+       6*:   23:    virtual ~Repository() = default;
+------------------
+_ZN10RepositoryI6OfertaED0Ev:
+function _ZN10RepositoryI6OfertaED0Ev called 0 returned 0% blocks executed 0%
+    #####:   23:    virtual ~Repository() = default;
+    %%%%%:   23-block  0
+call    0 never executed
+call    1 never executed
+------------------
+_ZN10RepositoryI6OfertaED2Ev:
+function _ZN10RepositoryI6OfertaED2Ev called 6 returned 100% blocks executed 100%
+        6:   23:    virtual ~Repository() = default;
+        6:   23-block  0
+call    0 returned 6
+------------------
+        -:   24:
+        -:   25:    /* --- Operatii CRUD --- */
+        -:   26:
+        -:   27:    /// Adauga un element nou, daca nu exista un element cu acelasi id in repository
+        -:   28:    /// @param elemX Elementul ce se adauga
+        -:   29:    /// @throw RepoError cu mesajul "Elementul de tip TElem exista deja in repository daca elementul exista deja in repository!\n", daca deja exista un element cu acelasi id in repository
+function _ZN10RepositoryI6OfertaE14repoAdaugaElemERKS0_ called 13 returned 85% blocks executed 67%
+       13:   30:    virtual void repoAdaugaElem(const TElem& elemX){
+       23:   31:        for (const auto& elem: elems)
+       13:   31-block  0
+call    0 returned 13
+call    1 returned 13
+       12:   31-block  1
+call    2 returned 12
+       10:   31-block  2
+call    3 returned 10
+       23:   31-block  3
+call    4 returned 23
+branch  5 taken 12
+branch  6 taken 11 (fallthrough)
+       12:   32:            if (elem.getId() == elemX.getId())
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
+branch  2 taken 0 (throw)
+       12:   32-block  0
+call    3 returned 12
+branch  4 taken 12 (fallthrough)
+branch  5 taken 0 (throw)
+       12:   32-block  1
+branch  6 taken 2 (fallthrough)
+branch  7 taken 10
+        2:   33:                throw RepoError("Deja exista un element salvat, cu id-ul " + to_string(elemX.getId()) + "!\n");
+        2:   33-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   33-block  1
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   33-block  2
+call    7 returned 2
+branch  8 taken 2 (fallthrough)
+branch  9 taken 0 (throw)
+        2:   33-block  3
+call   10 returned 2
+branch 11 taken 2 (fallthrough)
+branch 12 taken 0 (throw)
+        2:   33-block  4
+call   13 returned 2
+branch 14 taken 2 (fallthrough)
+branch 15 taken 0 (throw)
+        2:   33-block  5
+call   16 returned 2
+call   17 returned 2
+call   18 returned 2
+call   19 returned 2
+    $$$$$:   33-block  6
+call   20 never executed
+    $$$$$:   33-block  7
+    $$$$$:   33-block  8
+call   21 never executed
+    $$$$$:   33-block  9
+    $$$$$:   33-block 10
+call   22 never executed
+    $$$$$:   33-block 11
+    $$$$$:   33-block 12
+call   23 never executed
+       11:   34:        elems.push_back(elemX);
+       11:   34-block  0
+call    0 returned 11
+       11:   35:    }
+        -:   36:
+        -:   37:    /// Modifica un element daca e existent in repository
+        -:   38:    /// @param elemX Elementul cu care este modificat vechiul element
+        -:   39:    /// @throw RepoError cu mesajul "Nu exista niciun element de tip TElem, cu id-ul elemX.getId()!\n", daca nu exista un element cu acelasi id in repository
+function _ZN10RepositoryI6OfertaE16repoModificaElemERKS0_ called 5 returned 60% blocks executed 68%
+        5:   40:    virtual void repoModificaElem(const TElem& elemX) {
+        7:   41:        for (auto& elem: elems)
+        5:   41-block  0
+call    0 returned 5
+call    1 returned 5
+        5:   41-block  1
+call    2 returned 5
+        2:   41-block  2
+call    3 returned 2
+        7:   41-block  3
+call    4 returned 7
+branch  5 taken 5
+branch  6 taken 2 (fallthrough)
+        5:   42:            if (elem.getId() == elemX.getId()) {
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   42-block  0
+call    3 returned 5
+branch  4 taken 5 (fallthrough)
+branch  5 taken 0 (throw)
+        5:   42-block  1
+branch  6 taken 3 (fallthrough)
+branch  7 taken 2
+        3:   43:                elem = elemX;
+        3:   43-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   44:                return;
+        3:   44-block  0
+        3:   44-block  1
+        -:   45:            }
+        2:   46:        throw RepoError("Nu exista niciun element, cu id-ul " + to_string(elemX.getId()) + "!\n");
+        2:   46-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   46-block  1
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   46-block  2
+call    7 returned 2
+branch  8 taken 2 (fallthrough)
+branch  9 taken 0 (throw)
+        2:   46-block  3
+call   10 returned 2
+branch 11 taken 2 (fallthrough)
+branch 12 taken 0 (throw)
+        2:   46-block  4
+call   13 returned 2
+branch 14 taken 2 (fallthrough)
+branch 15 taken 0 (throw)
+        2:   46-block  5
+call   16 returned 2
+call   17 returned 2
+call   18 returned 2
+call   19 returned 0
+    $$$$$:   46-block  6
+call   20 never executed
+    $$$$$:   46-block  7
+    $$$$$:   46-block  8
+call   21 never executed
+    $$$$$:   46-block  9
+    $$$$$:   46-block 10
+call   22 never executed
+    $$$$$:   46-block 11
+    $$$$$:   46-block 12
+call   23 never executed
+        -:   47:    }
+        -:   48:
+        -:   49:    /// Cauta un element in repository dupa id
+        -:   50:    /// @param id id-ul elementului cautat
+        -:   51:    /// @return Elementul gasit
+        -:   52:    /// @throw RepoError cu mesajul "Nu exista niciun element de tip TElem, cu id-ul elemX.getId()!\n", daca nu exista un element cu acelasi id in repository
+function _ZN10RepositoryI6OfertaE13repoCautaElemEi called 10 returned 70% blocks executed 66%
+       10:   53:    virtual TElem repoCautaElem(int id) {
+        -:   54:        /*for (const auto& elem : elems)
+        -:   55:            if (elem.getId() == id)
+        -:   56:                return elem;*/
+        -:   57:
+       10:   58:        auto it = find_if(this->elems.begin(), this->elems.end(),
+       10:   58-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+branch  3 taken 10 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN10RepositoryI6OfertaE13repoCautaElemEiENKUlRKS0_E_clES3_ called 13 returned 100% blocks executed 100%
+       26:   59:                         [id](const TElem& elem) {
+       13:   60:                             return elem.getId() == id;
+       13:   60-block  0
+call    0 returned 13
+        -:   61:                         });
+        -:   62:
+       10:   63:        if (it != elems.end()) {
+       10:   63-block  0
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 7 (fallthrough)
+branch  3 taken 3
+       14:   64:            return *it;
+        7:   64-block  0
+call    0 returned 7
+call    1 returned 7
+branch  2 taken 7 (fallthrough)
+branch  3 taken 0 (throw)
+        7:   64-block  1
+        -:   65:        }
+        -:   66:
+        3:   67:        throw RepoError("Nu exista niciun element, cu id-ul " + to_string(id) + "!\n");
+        3:   67-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   67-block  1
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   67-block  2
+call    7 returned 3
+branch  8 taken 3 (fallthrough)
+branch  9 taken 0 (throw)
+        3:   67-block  3
+call   10 returned 3
+branch 11 taken 3 (fallthrough)
+branch 12 taken 0 (throw)
+        3:   67-block  4
+call   13 returned 3
+call   14 returned 3
+call   15 returned 3
+call   16 returned 3
+    $$$$$:   67-block  5
+call   17 never executed
+    $$$$$:   67-block  6
+    $$$$$:   67-block  7
+call   18 never executed
+    $$$$$:   67-block  8
+    $$$$$:   67-block  9
+call   19 never executed
+    $$$$$:   67-block 10
+    $$$$$:   67-block 11
+call   20 never executed
+        -:   68:    }
+        -:   69:
+        -:   70:    /// Sterge un element din repository dupa id
+        -:   71:    /// @param id id-ul elementului de sters
+        -:   72:    /// @throw RepoError cu mesajul "Nu exista niciun element de tip TElem, cu id-ul elemX.getId()!\n", daca nu exista un element cu acelasi id in repository
+function _ZN10RepositoryI6OfertaE14repoStergeElemEi called 5 returned 60% blocks executed 62%
+        5:   73:    virtual void repoStergeElem(int id) {
+       5*:   74:        for (auto it = elems.begin(); it != elems.end(); ++it) {
+        5:   74-block  0
+call    0 returned 5
+    %%%%%:   74-block  1
+call    1 never executed
+        5:   74-block  2
+call    2 returned 5
+call    3 returned 5
+branch  4 taken 3
+branch  5 taken 2 (fallthrough)
+        3:   75:            if (it->getId() == id) {
+        3:   75-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   75-block  1
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0
+        3:   76:                elems.erase(it);
+        3:   76-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   76-block  1
+        3:   77:                return;
+        3:   77-block  0
+        3:   77-block  1
+        -:   78:            }
+        -:   79:        }
+        2:   80:        throw RepoError("Nu exista niciun element, cu id-ul " + to_string(id) + "!\n");
+        2:   80-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   80-block  1
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   80-block  2
+call    7 returned 2
+branch  8 taken 2 (fallthrough)
+branch  9 taken 0 (throw)
+        2:   80-block  3
+call   10 returned 2
+branch 11 taken 2 (fallthrough)
+branch 12 taken 0 (throw)
+        2:   80-block  4
+call   13 returned 2
+call   14 returned 2
+call   15 returned 2
+call   16 returned 0
+    $$$$$:   80-block  5
+call   17 never executed
+    $$$$$:   80-block  6
+    $$$$$:   80-block  7
+call   18 never executed
+    $$$$$:   80-block  8
+    $$$$$:   80-block  9
+call   19 never executed
+    $$$$$:   80-block 10
+    $$$$$:   80-block 11
+call   20 never executed
+        -:   81:    }
+        -:   82:
+        -:   83:    /* --- Operatii extra --- */
+        -:   84:
+        -:   85:    /// Returneaza toate elementele din repository
+function _ZN10RepositoryI6OfertaE15repoGetAllElemsEv called 33 returned 100% blocks executed 100%
+       33:   86:    vector<TElem> repoGetAllElems() {
+       33:   87:        return this->elems;
+       33:   87-block  0
+call    0 returned 33
+        -:   88:    }
+        -:   89:
+        -:   90:    /// Elementele din repository devin elemsX
+        -:   91:    /// @param elemsX noile elemente din repository
+function _ZN10RepositoryI6OfertaE15repoSetAllElemsERKSt6vectorIS0_SaIS0_EE called 10 returned 100% blocks executed 100%
+       10:   92:    virtual void repoSetAllElems(const vector<TElem>& elemsX) {
+       10:   93:        this->elems = elemsX;
+       10:   93-block  0
+call    0 returned 10
+       10:   94:    }
+        -:   95:
+        -:   96:    /// Returneaza numarul de elemente din repository
+function _ZN10RepositoryI6OfertaE11repoGetSizeEv called 3 returned 100% blocks executed 100%
+        3:   97:    int repoGetSize() {
+        3:   98:        return this->elems.size();
+        3:   98-block  0
+call    0 returned 3
+        -:   99:    }
+        -:  100:};
+        -:  101:
+        -:  102:#endif //REPOSITORY_H

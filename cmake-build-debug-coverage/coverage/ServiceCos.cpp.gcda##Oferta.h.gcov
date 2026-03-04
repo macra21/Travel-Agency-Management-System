@@ -1,0 +1,128 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/Domeniu/Oferta.h
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Service/ServiceCos/ServiceCos.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Service/ServiceCos/ServiceCos.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alxma on 4/24/2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef OFERTA_H
+        -:    6:#define OFERTA_H
+        -:    7:#include <bits/stdc++.h>
+        -:    8:
+        -:    9:#include <utility>
+        -:   10:using namespace std;
+        -:   11:class Oferta {
+        -:   12:private:
+        -:   13:    string denumire, destinatie, tip;
+        -:   14:    double pret;
+        -:   15:    int id;
+        -:   16:public:
+        -:   17:    /* --- Constructors --- */
+        -:   18:
+        -:   19:    ///Constructor cu parametrii
+        -:   20:    Oferta(string  denumireX, string  destinatieX, string  tipX, const double pretX, const int idX):
+        -:   21:        denumire{move(denumireX)}, destinatie{move(destinatieX)}, tip{move(tipX)}, pret{pretX},id{idX} {}
+        -:   22:
+        -:   23:    ///Constructor prin copiere
+function _ZN6OfertaC2ERKS_ called 0 returned 0% blocks executed 0%
+    #####:   24:    Oferta(const Oferta& ofertaX):
+    #####:   25:        denumire{ofertaX.getDenumire()}, destinatie{ofertaX.getDestinatie()}, tip{ofertaX.getTip()}, pret{ofertaX.getPret()},id{ofertaX.getId()} {}
+    %%%%%:   25-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   25-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   25-block  2
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:   25-block  3
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   25-block  4
+    $$$$$:   25-block  5
+call   13 never executed
+    $$$$$:   25-block  6
+call   14 never executed
+    $$$$$:   25-block  7
+call   15 never executed
+        -:   26:
+        -:   27:    ///Cosntructor prin asiganre
+        -:   28:    Oferta& operator=(const Oferta& ofertaX) = default;
+        -:   29:
+        -:   30:    /* --- Suprascrieri operatori --- */
+        -:   31:    bool operator==(const Oferta& other) const {
+        -:   32:        return denumire == other.denumire &&
+        -:   33:               destinatie == other.destinatie &&
+        -:   34:               tip == other.tip &&
+        -:   35:               pret == other.pret &&
+        -:   36:               id == other.id;
+        -:   37:    }
+        -:   38:
+        -:   39:    /* --- Getters --- */
+        -:   40:
+        -:   41:    /// Returneaza denumirea ofertei
+        -:   42:    [[nodiscard]] string getDenumire() const;
+        -:   43:
+        -:   44:    /// Returneaza destinatia ofertei
+        -:   45:    [[nodiscard]] string getDestinatie() const;
+        -:   46:
+        -:   47:    /// Returneaza tipul ofertei
+        -:   48:    [[nodiscard]] string getTip() const;
+        -:   49:
+        -:   50:    /// Returneaza pretul ofertei
+        -:   51:    [[nodiscard]] double getPret() const;
+        -:   52:
+        -:   53:    /// Returneaza id-ul ofertei
+        -:   54:    [[nodiscard]] int getId() const;
+        -:   55:
+        -:   56:    /* --- Setters --- */
+        -:   57:
+        -:   58:    /// Seteaza denumirea ofertei la denumireX
+        -:   59:    /// @param denumireX : noua denumire a ofertei
+        -:   60:    void setDenumire(const string& denumireX);
+        -:   61:
+        -:   62:    /// Seteaza destinatia ofertei la destinatieX
+        -:   63:    /// @param destinatieX : noua destinatie a ofertei
+        -:   64:    void setDestinatie(const string& destinatieX);
+        -:   65:
+        -:   66:    /// Seteaza noul tip al ofertei la tipX
+        -:   67:    /// @param tipX : noul tip al ofertei
+        -:   68:    void setTip(const string& tipX);
+        -:   69:
+        -:   70:    /// Seteaza noul pret al ofertei la pretX
+        -:   71:    /// @param pretX : noul pret al ofertei
+        -:   72:    void setPret(const double pretX);
+        -:   73:
+        -:   74:    /* --- Serializare+Deserializare pentru lucrul cu fisiere --- */
+        -:   75:
+        -:   76:    /// Creeaza un nou obiect Oferta din linia de text
+        -:   77:    /// @param line : linia de text
+        -:   78:    /// @return un obiect Oferta
+        -:   79:    static Oferta lineToTElem(const string& line);
+        -:   80:
+        -:   81:    /// Creeaza o linie de text cu continutul ofertei
+        -:   82:    /// @param ofertaX : un obiect Oferta
+        -:   83:    /// @return linia de text
+        -:   84:    static string TElemToLine(const Oferta& ofertaX);
+        -:   85:
+        -:   86:    /* --- Destructors --- */
+        -:   87:
+        -:   88:    //Destructor default
+function _ZN6OfertaD2Ev called 0 returned 0% blocks executed 0%
+    #####:   89:    ~Oferta() = default;
+    %%%%%:   89-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   90:};
+        -:   91:
+        -:   92:
+        -:   93:
+        -:   94:#endif // OFERTA_H

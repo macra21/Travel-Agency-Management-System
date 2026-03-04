@@ -1,0 +1,77 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/Service/ServiceOferta/ServiceOferta.h
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Teste/Teste.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Teste/Teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alxma on 4/25/2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef SERVICEOFERTA_H
+        -:    6:#define SERVICEOFERTA_H
+        -:    7:#include "../../Repository/Repository.h"
+        -:    8:#include "Oferta.h"
+        -:    9:
+        -:   10:class ServiceOferta{
+        -:   11:private:
+        -:   12:    Repository<Oferta>& repoOferta;
+        -:   13:public:
+        -:   14:    /* --- Constructors --- */
+        -:   15:
+function _ZN13ServiceOfertaC2ER10RepositoryI6OfertaE called 2 returned 100% blocks executed 100%
+        2:   16:    explicit ServiceOferta(Repository<Oferta>& repoOfertaX):
+        2:   17:        repoOferta{repoOfertaX}{}
+        -:   18:
+        -:   19:    /* --- Operatii CRUD --- */
+        -:   20:
+        -:   21:     /// Adauga o oferta in repository, dupa validare.
+        -:   22:     /// @param ofertaX Oferta ce trebuie adaugata
+        -:   23:     /// @throw ValidationError daca validarea ofertei esueaza
+        -:   24:     /// @throw RepoError daca oferta exista deja in repository
+        -:   25:    void serviceAdaugaOferta(const Oferta& ofertaX);
+        -:   26:
+        -:   27:    /// Modifica o oferta in repository, dupa verificare
+        -:   28:    /// @param ofertaX Oferta ce se modifica
+        -:   29:    /// @throw ValidationError daca validarea ofertei esueaza
+        -:   30:    /// @throw RepoError daca oferta nu exista in repository
+        -:   31:    void serviceModificaOferta(const Oferta& ofertaX);
+        -:   32:
+        -:   33:    /// Cauta o oferta in repository
+        -:   34:    /// @param id Id-ul ofertei ce este cautata
+        -:   35:    /// @return oferta, daca aceasta exista in repository
+        -:   36:    /// @throw RepoError daca oferta nu exista in repository
+        -:   37:    Oferta serviceCautaOferta(int id) const;
+        -:   38:
+        -:   39:    /// Sterge o oferta din repository
+        -:   40:    /// @param id Id-ul ofertei ce se sterge
+        -:   41:    /// @throw RepoError daca oferta nu exista in repository
+        -:   42:    void serviceStergeOferta(int id);
+        -:   43:
+        -:   44:    /* --- Filtrare --- */
+        -:   45:
+        -:   46:    /// Filtreaza oferte dupa destinatie
+        -:   47:    /// @return vector<Oferta> cu ofertele filtrate
+        -:   48:    vector<Oferta> serviceFiltreazaDupaDestinatieOferta(const string &destinatie) const;
+        -:   49:
+        -:   50:    /// Filtreaza oferte dupa pret
+        -:   51:    /// @return vector<Oferta> cu ofertele filtrate
+        -:   52:    vector<Oferta> serviceFiltreazaDupaPretOferta(double pretMin, double pretMax) const;
+        -:   53:
+        -:   54:    /* --- Sortare --- */
+        -:   55:
+        -:   56:    /// Sorteaza ofertele dupa denumire(mod=1), destinație(mod=2), tip + preț(mod=3)
+        -:   57:    /// @param mod Modul de sortare
+        -:   58:    void serviceSortareOferta(int mod);
+        -:   59:
+        -:   60:    /* --- Operatii extra --- */
+        -:   61:
+        -:   62:    /// Returneaza toate ofertele din repository
+        -:   63:    vector<Oferta> serviceGetAllOferte() const;
+        -:   64:
+        -:   65:    /// Elementele din repository devin elemsX
+        -:   66:    /// @param oferteX noile elemente din repository
+        -:   67:    void serviceSetAllOferte(const vector<Oferta> &oferteX) const;
+        -:   68:};
+        -:   69:
+        -:   70:
+        -:   71:
+        -:   72:#endif //SERVICEOFERTA_H

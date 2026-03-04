@@ -1,0 +1,46 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/Service/ServiceCos/ServiceCos.h
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Teste/Teste.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Teste/Teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alxma on 4/26/2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef SERVICECOS_H
+        -:    6:#define SERVICECOS_H
+        -:    7:#include <vector>
+        -:    8:#include <random>
+        -:    9:#include "Oferta.h"
+        -:   10:#include "Repository.h"
+        -:   11:
+        -:   12:
+        -:   13:class ServiceCos {
+        -:   14:private:
+        -:   15:    vector<Oferta> cos;
+        -:   16:    Repository<Oferta>& repoOferta;
+        -:   17:public:
+        -:   18:    /* --- Constructors --- */
+        -:   19:
+function _ZN10ServiceCosC2ER10RepositoryI6OfertaE called 1 returned 100% blocks executed 100%
+        1:   20:    explicit ServiceCos(Repository<Oferta>& repoOfertaX):
+        1:   21:        repoOferta{repoOfertaX}{}
+        1:   21-block  0
+call    0 returned 1
+        -:   22:
+        -:   23:    /* --- Operatii cos --- */
+        -:   24:
+        -:   25:    void adaugaOfertaInCos(int index);
+        -:   26:    void genereazaCosAleator(int numar);
+        -:   27:    void golesteCos();
+        -:   28:    void exportaCosToCSV(const string& filename) const;
+        -:   29:
+        -:   30:    vector<Oferta> getCos();
+        -:   31:
+        -:   32:    int getSize();
+        -:   33:
+        -:   34:    /* Operatii extra --- */
+        -:   35:};
+        -:   36:
+        -:   37:
+        -:   38:
+        -:   39:#endif //SERVICECOS_H

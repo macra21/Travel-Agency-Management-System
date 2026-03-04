@@ -1,0 +1,1009 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/UI/Consola.cpp
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/UI/Consola.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/UI/Consola.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alxma on 4/26/2025.
+        -:    3://
+        -:    4:
+        -:    5:#include "Consola.h"
+        -:    6:
+        -:    7:/* ===== Functii ajutatoare ===== */
+        -:    8:
+        -:    9:/// Citeste parametrii unei oferte, o creeaza si o returneaza
+function _Z13citesteOfertav called 0 returned 0% blocks executed 0%
+    #####:   10:Oferta citesteOferta() {
+    #####:   11:    cout<<"Denumire oferta: ";
+    %%%%%:   11-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   12:    string denumire;
+    %%%%%:   12-block  0
+call    0 never executed
+    #####:   13:    cin>>denumire;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   14:    cout<<"Destinatie oferta: ";
+    %%%%%:   14-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   15:    string destinatie;
+    %%%%%:   15-block  0
+call    0 never executed
+    #####:   16:    cin>>destinatie;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   17:    cout<<"Tip oferta: ";
+    %%%%%:   17-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   18:    string tip;
+    %%%%%:   18-block  0
+call    0 never executed
+    #####:   19:    cin>>tip;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   20:    cout<<"Pret oferta: ";
+    %%%%%:   20-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   21:    double pret;
+    #####:   22:    cin>>pret;
+    %%%%%:   22-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   23:    cout<<"Id oferta: ";
+    %%%%%:   23-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   24:    int id;
+    #####:   25:    cin>>id;
+    %%%%%:   25-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   26:    return Oferta{denumire, destinatie, tip, pret, id};
+    %%%%%:   26-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   26-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   26-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   26-block  3
+call    9 never executed
+call   10 never executed
+call   11 never executed
+call   12 never executed
+    %%%%%:   26-block  4
+    $$$$$:   26-block  5
+call   13 never executed
+    $$$$$:   26-block  6
+    $$$$$:   26-block  7
+call   14 never executed
+    $$$$$:   26-block  8
+    #####:   27:}
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   27-block  0
+call    3 never executed
+    $$$$$:   27-block  1
+call    4 never executed
+    $$$$$:   27-block  2
+call    5 never executed
+        -:   28:
+        -:   29:/// Afiseaza o oferta intr-un format clar si ordonat
+function _Z14afiseazaOfertaRK6Oferta called 0 returned 0% blocks executed 0%
+    #####:   30:void afiseazaOferta(const Oferta& oferta) {
+    #####:   31:    cout << "╔════════════════════════════════════════╗" << endl;
+    %%%%%:   31-block  0
+call    0 never executed
+call    1 never executed
+    #####:   32:    cout << "║             DETALII OFERTA             ║" << endl;
+call    0 never executed
+call    1 never executed
+    #####:   33:    cout << "╠════════════════════════════════════════╣" << endl;
+call    0 never executed
+call    1 never executed
+    #####:   34:    cout << "║ Denumire:   " << setw(26) << left << oferta.getDenumire() << " ║" << endl;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   34-block  0
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:   34-block  1
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   34-block  2
+call   14 never executed
+    $$$$$:   34-block  3
+call   15 never executed
+    $$$$$:   34-block  4
+call   16 never executed
+    #####:   35:    cout << "║ Destinație: " << setw(26) << left << oferta.getDestinatie() << " ║" << endl;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   35-block  0
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:   35-block  1
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   35-block  2
+call   14 never executed
+    $$$$$:   35-block  3
+call   15 never executed
+    $$$$$:   35-block  4
+call   16 never executed
+    #####:   36:    cout << "║ Tip:        " << setw(26) << left << oferta.getTip() << " ║" << endl;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   36-block  0
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:   36-block  1
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   36-block  2
+call   14 never executed
+    $$$$$:   36-block  3
+call   15 never executed
+    #####:   37:    cout << "║ Pret:       " << setw(26) << left << fixed << setprecision(2) << oferta.getPret() << " ║" << endl;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+call   10 never executed
+    #####:   38:    cout << "║ ID:         " << setw(26) << left << oferta.getId() << " ║" << endl;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+    #####:   39:    cout << "╚════════════════════════════════════════╝" << endl;
+call    0 never executed
+call    1 never executed
+    #####:   40:}
+        -:   41:
+        -:   42:/* ====== Operatii UI ===== */
+        -:   43:
+        -:   44:/* --- Operatii CRUD --- */
+        -:   45:
+        -:   46:/// Meniu de help ce afiseaza toate comenzile disponibile
+function _Z11consolaHelpv called 0 returned 0% blocks executed 0%
+    #####:   47:void consolaHelp() {
+    #####:   48:    cout << "Comenzi disponibile:\n";
+    %%%%%:   48-block  0
+call    0 never executed
+    #####:   49:    cout << "-- Operații CRUD --\n";
+call    0 never executed
+    #####:   50:    cout << "1. adaugaOferta - adaugă o ofertă\n";
+call    0 never executed
+    #####:   51:    cout << "2. cautaOferta - caută o ofertă\n";
+call    0 never executed
+    #####:   52:    cout << "3. modificaOferta - modifică o ofertă\n";
+call    0 never executed
+    #####:   53:    cout << "4. stergeOferta - șterge o ofertă\n";
+call    0 never executed
+    #####:   54:    cout << "5. listeazaOferte - listează toate ofertele\n";
+call    0 never executed
+        -:   55:
+    #####:   56:    cout << "\n-- Operații de filtrare și sortare --\n";
+call    0 never executed
+    #####:   57:    cout << "6. filtrareOferte - filtrează ofertele după destinație sau preț\n";
+call    0 never executed
+    #####:   58:    cout << "7. sortareOferte - sortează ofertele după diverse criterii\n";
+call    0 never executed
+        -:   59:
+    #####:   60:    cout << "\n-- Operații pentru coș --\n";
+call    0 never executed
+    #####:   61:    cout << "8. adaugaInCos - adaugă o ofertă în coș după denumire\n";
+call    0 never executed
+    #####:   62:    cout << "9. golesteCos - golește coșul\n";
+call    0 never executed
+    #####:   63:    cout << "10. genereazaCos - generează aleator un coș\n";
+call    0 never executed
+    #####:   64:    cout << "11. exportaCos - exportă coșul în format CSV\n";
+call    0 never executed
+    #####:   65:    cout << "12. afiseazaCos - afișează conținutul coșului\n";
+call    0 never executed
+        -:   66:
+    #####:   67:    cout << "\n-- Alte comenzi --\n";
+call    0 never executed
+    #####:   68:    cout << "13. help - afișează acest meniu\n";
+call    0 never executed
+    #####:   69:    cout << "14. exit - ieșire din aplicație\n";
+call    0 never executed
+    #####:   70:}
+        -:   71:
+        -:   72:
+        -:   73:/// Adauga o oferta
+function _ZN7Consola19consolaAdaugaOfertaEv called 0 returned 0% blocks executed 0%
+    #####:   74:void Consola::consolaAdaugaOferta() {
+    #####:   75:    Oferta oferta = citesteOferta();
+    %%%%%:   75-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   76:    this->serviceOferta.serviceAdaugaOferta(oferta);
+    %%%%%:   76-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   77:    cout<<"Oferta adaugata cu succes!\n";
+    %%%%%:   77-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   78:}
+    %%%%%:   78-block  0
+call    0 never executed
+    $$$$$:   78-block  1
+call    1 never executed
+        -:   79:
+        -:   80:/// Modifica o oferta
+function _ZN7Consola21consolaModificaOfertaEv called 0 returned 0% blocks executed 0%
+    #####:   81:void Consola::consolaModificaOferta() {
+    #####:   82:    Oferta oferta = citesteOferta();
+    %%%%%:   82-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   83:    this->serviceOferta.serviceModificaOferta(oferta);
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   84:    cout<<"Oferta modificata cu succes!\n";
+    %%%%%:   84-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   85:}
+    %%%%%:   85-block  0
+call    0 never executed
+    $$$$$:   85-block  1
+call    1 never executed
+        -:   86:
+        -:   87:/// Cauta o oferta dupa id
+function _ZN7Consola18consolaCautaOfertaEv called 0 returned 0% blocks executed 0%
+    #####:   88:void Consola::consolaCautaOferta() {
+        -:   89:    int id;
+    #####:   90:    cout<<"Id oferta: ";
+    %%%%%:   90-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   91:    cin>>id;
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   92:    Oferta oferta = this->serviceOferta.serviceCautaOferta(id);
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   93:    cout<<"Oferta gasita cu succes!\n";
+    %%%%%:   93-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   94:    afiseazaOferta(oferta);
+    %%%%%:   94-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   95:}
+    %%%%%:   95-block  0
+call    0 never executed
+    $$$$$:   95-block  1
+call    1 never executed
+        -:   96:
+        -:   97:/// Sterge o oferta dupa id
+function _ZN7Consola19consolaStergeOfertaEv called 0 returned 0% blocks executed 0%
+    #####:   98:void Consola::consolaStergeOferta() {
+        -:   99:    int id;
+    #####:  100:    cout<<"Id oferta: ";
+    %%%%%:  100-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  101:    cin>>id;
+    %%%%%:  101-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  102:    this->serviceOferta.serviceStergeOferta(id);
+    %%%%%:  102-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  103:    cout<<"Oferta stearsa cu succes!\n";
+    %%%%%:  103-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  104:}
+    %%%%%:  104-block  0
+        -:  105:
+        -:  106:/// Afiseaza toate ofertele
+function _ZN7Consola21consolaListeazaOferteEv called 0 returned 0% blocks executed 0%
+    #####:  107:void Consola::consolaListeazaOferte() {
+    #####:  108:    cout<<"Lista oferte:\n";
+    %%%%%:  108-block  0
+call    0 never executed
+    #####:  109:    for (const auto& oferta : this->serviceOferta.serviceGetAllOferte()) {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  109-block  0
+call    3 never executed
+call    4 never executed
+    %%%%%:  109-block  1
+call    5 never executed
+    %%%%%:  109-block  2
+call    6 never executed
+    %%%%%:  109-block  3
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    #####:  110:        afiseazaOferta(oferta);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  111:    }
+    %%%%%:  111-block  0
+call    0 never executed
+    $$$$$:  111-block  1
+call    1 never executed
+    #####:  112:}
+        -:  113:
+        -:  114:/* ===== Filtrari ===== */
+        -:  115:
+        -:  116:/// Filtreaza ofertele
+function _ZN7Consola21consolaFiltrareOferteEv called 0 returned 0% blocks executed 0%
+    #####:  117:void Consola::consolaFiltrareOferte() {
+    #####:  118:    cout<<"Alegeti un mod de filtrare(1/2):\n1. Dupa destinatie\n2. Dupa pret\n>>> ";
+    %%%%%:  118-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  119:    int mod;
+    #####:  120:    cin>>mod;
+    %%%%%:  120-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  121:    if (mod == 1) {
+    %%%%%:  121-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  122:        cout<<"Introduceti destinatie: ";
+    %%%%%:  122-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  123:        string destinatie;
+    %%%%%:  123-block  0
+call    0 never executed
+    #####:  124:        cin>>destinatie;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  125:        cout<<"Lista oferte:\n";
+    %%%%%:  125-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  126:        for (const auto& oferta: this->serviceOferta.serviceFiltreazaDupaDestinatieOferta(destinatie)) {
+    %%%%%:  126-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  126-block  1
+call    3 never executed
+call    4 never executed
+    %%%%%:  126-block  2
+call    5 never executed
+    %%%%%:  126-block  3
+call    6 never executed
+    %%%%%:  126-block  4
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    #####:  127:            afiseazaOferta(oferta);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  128:        }
+    %%%%%:  128-block  0
+call    0 never executed
+    $$$$$:  128-block  1
+call    1 never executed
+    #####:  129:    }
+call    0 never executed
+    $$$$$:  129-block  0
+call    1 never executed
+    #####:  130:    else if (mod == 2) {
+    %%%%%:  130-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  131:        cout<<"Introduceti pret minim: ";
+    %%%%%:  131-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  132:        double pretMin;
+    #####:  133:        cin>>pretMin;
+    %%%%%:  133-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  134:        cout<<"Introduceti pret maxim: ";
+    %%%%%:  134-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  135:        double pretMax;
+    #####:  136:        cin>>pretMax;
+    %%%%%:  136-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  137:        cout<<"Lista oferte:\n";
+    %%%%%:  137-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  138:        for (const auto& oferta: this->serviceOferta.serviceFiltreazaDupaPretOferta(pretMin, pretMax)) {
+    %%%%%:  138-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  138-block  1
+call    3 never executed
+call    4 never executed
+    %%%%%:  138-block  2
+call    5 never executed
+    %%%%%:  138-block  3
+call    6 never executed
+    %%%%%:  138-block  4
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    #####:  139:            afiseazaOferta(oferta);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  140:        }
+    %%%%%:  140-block  0
+call    0 never executed
+    $$$$$:  140-block  1
+call    1 never executed
+        -:  141:    }
+        -:  142:    else {
+    #####:  143:        cout<<"Modul de filtrare este invalid!\n";
+    %%%%%:  143-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  144:    }
+    #####:  145:}
+    %%%%%:  145-block  0
+        -:  146:
+        -:  147:/* ===== Sortari ===== */
+        -:  148:
+        -:  149:/// Sortare oferte
+function _ZN7Consola20consolaSortareOferteEv called 0 returned 0% blocks executed 0%
+    #####:  150:void Consola::consolaSortareOferte(){
+    #####:  151:    cout<<"Alegeti un mod de sortare(1/2/3):\n1. Dupa Denumire\n2. Dupa Destinatie\n3. Tip + Pret\n>>> ";
+    %%%%%:  151-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  152:    int mod;
+    #####:  153:    cin>>mod;
+    %%%%%:  153-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  154:    if (mod!=1 && mod!=2 && mod!=3) {
+    %%%%%:  154-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  154-block  1
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  154-block  2
+branch  4 never executed
+branch  5 never executed
+    #####:  155:        cout<<"Modul de sortare este invalid!\n";
+    %%%%%:  155-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  156:        return;
+    %%%%%:  156-block  0
+        -:  157:    }
+    #####:  158:    cout<<"Lista oferte:\n";
+    %%%%%:  158-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  159:    this->serviceOferta.serviceSortareOferta(mod);
+    %%%%%:  159-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  160:    this->consolaListeazaOferte();
+    %%%%%:  160-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  161:}
+        -:  162:
+        -:  163:/* ===== Operatii Cos ===== */
+        -:  164:
+        -:  165:/// Adauga o oferta in cos
+function _ZN7Consola24consolaAdaugaOfertaInCosEv called 0 returned 0% blocks executed 0%
+    #####:  166:void Consola::consolaAdaugaOfertaInCos() {
+        -:  167:    int id;
+    #####:  168:    cout<<"Id oferta: ";
+    %%%%%:  168-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  169:    cin>>id;
+    %%%%%:  169-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  170:    this->serviceCos.adaugaOfertaInCos(id);
+    %%%%%:  170-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  171:    cout<<"Oferta adaugata cu succes!\n";
+    %%%%%:  171-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  172:}
+    %%%%%:  172-block  0
+        -:  173:
+        -:  174:/// Goleste cosul
+function _ZN7Consola17consolaGolesteCosEv called 0 returned 0% blocks executed 0%
+    #####:  175:void Consola::consolaGolesteCos() {
+    #####:  176:    this->serviceCos.golesteCos();
+    %%%%%:  176-block  0
+call    0 never executed
+    #####:  177:    cout<<"Cos golit!\n";
+call    0 never executed
+    #####:  178:}
+        -:  179:
+        -:  180:/// Genereaza un cos cu oferte aleatoare din repo
+function _ZN7Consola19consolaGenereazaCosEv called 0 returned 0% blocks executed 0%
+    #####:  181:void Consola::consolaGenereazaCos() {
+        -:  182:    int numar;
+    #####:  183:    cout<<"Introduceti numarul de oferte aleatoare: ";
+    %%%%%:  183-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  184:    cin>>numar;
+    %%%%%:  184-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  185:    this->serviceCos.genereazaCosAleator(numar);
+    %%%%%:  185-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  186:    cout<<"Cos generat cu succes!\n";
+    %%%%%:  186-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  187:}
+    %%%%%:  187-block  0
+        -:  188:
+        -:  189:/// Exporta cosul intr-un fisier csv
+function _ZN7Consola17consolaExportaCosEv called 0 returned 0% blocks executed 0%
+    #####:  190:void Consola::consolaExportaCos() {
+    #####:  191:    string filename;
+    %%%%%:  191-block  0
+call    0 never executed
+    #####:  192:    cout<<"Introduceti numele fisierului in care se face exportul(fara extensii): ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  193:    cin>>filename;
+    %%%%%:  193-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  194:    filename = "../Exports/" + filename + ".csv";
+    %%%%%:  194-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  194-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  194-block  2
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:  194-block  3
+call    9 never executed
+    $$$$$:  194-block  4
+    #####:  195:    this->serviceCos.exportaCosToCSV(filename);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  196:    cout<<"Cos exportat cu succes!\n";
+    %%%%%:  196-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  197:}
+    %%%%%:  197-block  0
+call    0 never executed
+    $$$$$:  197-block  1
+call    1 never executed
+        -:  198:
+function _ZN7Consola18consolaListeazaCosEv called 0 returned 0% blocks executed 0%
+    #####:  199:void Consola::consolaListeazaCos() {
+    #####:  200:    cout<<"Lista oferte:\n";
+    %%%%%:  200-block  0
+call    0 never executed
+    #####:  201:    for (const auto& oferta : this->serviceCos.getCos()) {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  201-block  0
+call    3 never executed
+call    4 never executed
+    %%%%%:  201-block  1
+call    5 never executed
+    %%%%%:  201-block  2
+call    6 never executed
+    %%%%%:  201-block  3
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    #####:  202:        afiseazaOferta(oferta);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  203:    }
+    %%%%%:  203-block  0
+call    0 never executed
+    $$$$$:  203-block  1
+call    1 never executed
+    #####:  204:}
+        -:  205:
+        -:  206:/* --- Rulare --- */
+        -:  207:
+        -:  208:/// Ruleaza Aplicatia cu interfata tip consola
+function _ZN7Consola10runConsolaEv called 0 returned 0% blocks executed 0%
+    #####:  209:void Consola::runConsola() {
+    #####:  210:    cout<<"Aplicatie de gestiune a ofertelor turistice.\n";
+    %%%%%:  210-block  0
+call    0 never executed
+    #####:  211:    consolaHelp();
+call    0 never executed
+        -:  212:    while (true) {
+        -:  213:        try {
+    #####:  214:            cout<<"Oferte in cos: "<<this->serviceCos.getSize()<<'\n';
+    %%%%%:  214-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  214-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  214-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  214-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    #####:  215:            cout << ">>> ";
+    %%%%%:  215-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  216:            string comanda;
+    %%%%%:  216-block  0
+call    0 never executed
+    #####:  217:            cin >> comanda;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  218:
+        -:  219:            // Comenzi CRUD
+    #####:  220:            if (comanda == "adaugaOferta")
+    %%%%%:  220-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  221:                consolaAdaugaOferta();
+    %%%%%:  221-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  222:            else if (comanda == "cautaOferta")
+    %%%%%:  222-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  223:                consolaCautaOferta();
+    %%%%%:  223-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  224:            else if (comanda == "modificaOferta")
+    %%%%%:  224-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  225:                consolaModificaOferta();
+    %%%%%:  225-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  226:            else if (comanda == "stergeOferta")
+    %%%%%:  226-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  227:                consolaStergeOferta();
+    %%%%%:  227-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  228:            else if (comanda == "listeazaOferte")
+    %%%%%:  228-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  229:                consolaListeazaOferte();
+    %%%%%:  229-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  230:
+        -:  231:            // Comenzi de filtrare și sortare
+    #####:  232:            else if (comanda == "filtrareOferte")
+    %%%%%:  232-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  233:                consolaFiltrareOferte();
+    %%%%%:  233-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  234:            else if (comanda == "sortareOferte")
+    %%%%%:  234-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  235:                consolaSortareOferte();
+    %%%%%:  235-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  236:
+        -:  237:            // Comenzi pentru coș
+    #####:  238:            else if (comanda == "adaugaInCos")
+    %%%%%:  238-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  239:                consolaAdaugaOfertaInCos();
+    %%%%%:  239-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  240:            else if (comanda == "golesteCos")
+    %%%%%:  240-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  241:                consolaGolesteCos();
+    %%%%%:  241-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  242:            else if (comanda == "genereazaCos")
+    %%%%%:  242-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  243:                consolaGenereazaCos();
+    %%%%%:  243-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  244:            else if (comanda == "exportaCos")
+    %%%%%:  244-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  245:                consolaExportaCos();
+    %%%%%:  245-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  246:            else if (comanda == "listeazaCos")
+    %%%%%:  246-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  247:                consolaListeazaCos();
+    %%%%%:  247-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  248:
+        -:  249:            // Alte comenzi
+    #####:  250:            else if (comanda == "help")
+    %%%%%:  250-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  251:                consolaHelp();
+    %%%%%:  251-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  252:            else if (comanda == "exit")
+    %%%%%:  252-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  253:                break;
+    %%%%%:  253-block  0
+        -:  254:            else
+    #####:  255:                cout << "Comandă necunoscută! Încercați 'help' pentru lista comenzilor.\n";
+    %%%%%:  255-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  256:        }
+    %%%%%:  256-block  0
+    %%%%%:  256-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  256-block  2
+call    3 never executed
+    =====:  257:        catch (const ValidationError& error) {
+    $$$$$:  257-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  257-block  1
+call    4 never executed
+    =====:  258:            cout << "Eroare validare date!\n" << error.getMessage();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  258-block  0
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    =====:  259:        }
+    $$$$$:  259-block  0
+call    0 never executed
+    $$$$$:  259-block  1
+call    1 never executed
+    =====:  260:        catch (const RepoError& error) {
+    $$$$$:  260-block  0
+call    0 never executed
+    =====:  261:            cout << "Eroare repository!\n" << error.getMessage();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  261-block  0
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    =====:  262:        }
+    $$$$$:  262-block  0
+call    0 never executed
+    $$$$$:  262-block  1
+call    1 never executed
+    =====:  263:        catch (const ServiceError& error) {
+    $$$$$:  263-block  0
+call    0 never executed
+    =====:  264:            cout << "Eroare service!\n" << error.getMessage();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  264-block  0
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    =====:  265:        }
+    $$$$$:  265-block  0
+call    0 never executed
+    $$$$$:  265-block  1
+call    1 never executed
+    =====:  266:        catch (...) {
+    $$$$$:  266-block  0
+call    0 never executed
+    =====:  267:            cout << "Eroare necunoscută!\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:  268:        }
+    $$$$$:  268-block  0
+call    0 never executed
+    $$$$$:  268-block  1
+call    1 never executed
+    #####:  269:    }
+    %%%%%:  269-block  0
+        -:  270:
+    #####:  271:}
+    %%%%%:  271-block  0

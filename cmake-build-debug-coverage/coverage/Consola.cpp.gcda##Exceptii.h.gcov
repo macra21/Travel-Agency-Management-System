@@ -1,0 +1,40 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/Exceptii/Exceptii.h
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/UI/Consola.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/UI/Consola.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alxma on 4/24/2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef EXCEPTII_H
+        -:    6:#define EXCEPTII_H
+        -:    7:#include <string>
+        -:    8:using namespace std;
+        -:    9:
+        -:   10:class Exceptie{
+        -:   11:private:
+        -:   12:    string message;
+        -:   13:public:
+        -:   14:    explicit Exceptie(const string &message):message(message){}
+function _ZNK8Exceptie10getMessageB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   15:    const string& getMessage()const{
+    #####:   16:        return message;
+    %%%%%:   16-block  0
+        -:   17:    }
+        -:   18:};
+        -:   19:
+        -:   20:class ValidationError : public Exceptie{
+        -:   21:public:
+        -:   22:    explicit ValidationError(const string &message):Exceptie(message){}
+        -:   23:};
+        -:   24:
+        -:   25:class RepoError : public Exceptie{
+        -:   26:public:
+        -:   27:    explicit RepoError(const string &message):Exceptie(message){}
+        -:   28:};
+        -:   29:
+        -:   30:class ServiceError : public Exceptie{
+        -:   31:public:
+        -:   32:    explicit ServiceError(const string &message):Exceptie(message){}
+        -:   33:};
+        -:   34:#endif //EXCEPTII_H

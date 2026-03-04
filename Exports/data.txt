@@ -1,0 +1,100 @@
+Oferta Zen,Bhutan,Retreat,1299.990000,2
+Oferta Zen,Bhutan,Retreat,1299.990000,3
+Oferta Ursari,Alaska,Safari,3499.500000,4
+Oferta Ursari,Alaska,Safari,3499.500000,5
+Oferta Ursari,Alaska,Safari,3499.500000,6
+Oferta Nocturna,Tokyo,City Break,999.990000,7
+Oferta Nocturna,Tokyo,City Break,999.990000,8
+Oferta Nocturna,Tokyo,City Break,999.990000,9
+Oferta Vulcanica,Islanda,Aventura,1899.750000,10
+Oferta Vulcanica,Islanda,Aventura,1899.750000,11
+Oferta Vulcanica,Islanda,Aventura,1899.750000,12
+Oferta Gourmet,Mexic,Gastronomie,799.250000,13
+Oferta Gourmet,Mexic,Gastronomie,799.250000,14
+Oferta Gourmet,Mexic,Gastronomie,799.250000,15
+Oferta Galactica,California,Tur Spatial,499999.990000,16
+Oferta Galactica,California,Tur Spatial,499999.990000,17
+Oferta Galactica,California,Tur Spatial,499999.990000,18
+Oferta Antarctica,Antarctica,Expeditie,10999.950000,19
+Oferta Antarctica,Antarctica,Expeditie,10999.950000,20
+Oferta Antarctica,Antarctica,Expeditie,10999.950000,21
+Oferta Maritima,Galapagos,Croaziera,5499.450000,22
+Oferta Maritima,Galapagos,Croaziera,5499.450000,23
+Oferta Maritima,Galapagos,Croaziera,5499.450000,24
+Oferta Legende Transilvania,Transilvania,Mister,649.300000,25
+Oferta Legende Transilvania,Transilvania,Mister,649.300000,26
+Oferta Legende Transilvania,Transilvania,Mister,649.300000,27
+Oferta Olimpica,Grecia,Istoric,899.800000,28
+Oferta Olimpica,Grecia,Istoric,899.800000,29
+Oferta Olimpica,Grecia,Istoric,899.800000,30
+Oferta Nordica,Finlanda,Schi,1599.600000,31
+Oferta Nordica,Finlanda,Schi,1599.600000,32
+Oferta Nordica,Finlanda,Schi,1599.600000,33
+Oferta Scufundari,Maldive,Scufundari,2199.850000,34
+Oferta Scufundari,Maldive,Scufundari,2199.850000,35
+Oferta Scufundari,Maldive,Scufundari,2199.850000,36
+Oferta Yoga,Bali,Wellness,1199.400000,37
+Oferta Yoga,Bali,Wellness,1199.400000,38
+Oferta Yoga,Bali,Wellness,1199.400000,39
+Oferta Rustica,Maramures,Eco,699.550000,40
+Oferta Rustica,Maramures,Eco,699.550000,41
+Oferta Rustica,Maramures,Eco,699.550000,42
+Oferta Familiala,Disneyland,Family,1299.200000,43
+Oferta Familiala,Disneyland,Family,1299.200000,44
+Oferta Familiala,Disneyland,Family,1299.200000,45
+Oferta Romantica,Paris,City Break,1499.650000,46
+Oferta Romantica,Paris,City Break,1499.650000,47
+Oferta Romantica,Paris,City Break,1499.650000,48
+Oferta Expeditie Amazon,Amazon,Explorare,1799.350000,49
+Oferta Expeditie Amazon,Amazon,Explorare,1799.350000,50
+Oferta Expeditie Amazon,Amazon,Explorare,1799.350000,51
+Oferta Culturala Quito,Quito,Culturala,749.450000,52
+Oferta Culturala Quito,Quito,Culturala,749.450000,53
+Oferta Culturala Quito,Quito,Culturala,749.450000,54
+Oferta Festival Rio,Rio,City Break,1099.900000,55
+Oferta Festival Rio,Rio,City Break,1099.900000,56
+Oferta Festival Rio,Rio,City Break,1099.900000,57
+Oferta Lux Monaco,Monaco,Lux,4999.990000,58
+Oferta Lux Monaco,Monaco,Lux,4999.990000,59
+Oferta Lux Monaco,Monaco,Lux,4999.990000,60
+Oferta Desert Sahara,Sahara,Aventura,1399.250000,61
+Oferta Desert Sahara,Sahara,Aventura,1399.250000,62
+Oferta Jungle Amazon,Amazon,Excursie,1599.850000,63
+Oferta Jungle Amazon,Amazon,Excursie,1599.850000,64
+Oferta Polara Groenlanda,Groenlanda,Expeditie,1799.150000,65
+Oferta Polara Groenlanda,Groenlanda,Expeditie,1799.150000,66
+Oferta Riviera Coasta Azurie,Coasta Azurie,Sejur,1299.950000,67
+Oferta Riviera Coasta Azurie,Coasta Azurie,Sejur,1299.950000,68
+Oferta Highland Scotia,Scotia,Aventura,1399.500000,69
+Oferta Highland Scotia,Scotia,Aventura,1399.500000,70
+Oferta Explorer Canada,Canada,Expeditie,1899.550000,71
+Oferta Explorer Canada,Canada,Expeditie,1899.550000,72
+Oferta Wellness Seychelles,Seychelles,Wellness,1599.500000,73
+Oferta Wellness Seychelles,Seychelles,Wellness,1599.500000,74
+Oferta Culturala Budapesta,Budapesta,City Break,699.900000,75
+Oferta Culturala Budapesta,Budapesta,City Break,699.900000,76
+Oferta Safari Africa,Kenya,Excursie,2199.900000,77
+Oferta Safari Africa,Kenya,Excursie,2199.900000,78
+Oferta NordExp Islanda,Islanda,Aventura,1799.300000,79
+Oferta NordExp Islanda,Islanda,Aventura,1799.300000,80
+Oferta Croaziera Caribe,Caribe,Croaziera,2099.750000,81
+Oferta Delta Dunare,Dunare,Eco,499.600000,82
+Oferta Metropola New York,New York,City Break,1299.000000,83
+Oferta Pelorus Noua Zeelanda,Noua Zeelanda,Aventura,2499.950000,84
+Oferta City Barcelona,Barcelona,City Break,899.500000,85
+Oferta Trilha Camino,Camino,Religios,599.990000,86
+Oferta Tea India,India,Culturala,999.990000,87
+Oferta Galaxy Taiwan,Taiwan,Tur Spatial,399999.990000,88
+Oferta Treno Italia,Italia,Tren,799.000000,89
+Oferta Coral Maldive,Maldive,Scufundari,2299.750000,90
+Oferta Delta Apuseni,Apuseni,Eco,549.450000,91
+Oferta Piramida Egipt,Egipt,Excursie,1299.850000,92
+Oferta Safari Australia,Australia,Safari,2999.800000,93
+Oferta Lacul Ohrid,Ohrid,Relaxare,499.950000,94
+Oferta City Break Praga,Praga,City Break,799.200000,95
+Oferta Cascada Iguazu,Iguazu,Aventura,1099.650000,96
+Oferta Balon Cappadocia,Cappadocia,Aventura,1899.900000,97
+Oferta Templu Angkor,Angkor,Culturala,899.750000,98
+Oferta Desert Atacama,Atacama,Expeditie,1699.550000,99
+Oferta Safari Brazilia,Brazilia,Safari,2599.990000,100
+Oferta Zen,Bhutan,Retreat,1299.990000,1

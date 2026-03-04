@@ -1,0 +1,283 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/Domeniu/Oferta.cpp
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Domeniu/Oferta.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Domeniu/Oferta.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alxma on 4/24/2025.
+        -:    3://
+        -:    4:#include "Oferta.h"
+        -:    5:
+        -:    6:/* --- Getters --- */
+        -:    7:
+        -:    8:/// Returneaza denumirea ofertei
+function _ZNK6Oferta11getDenumireB5cxx11Ev called 164 returned 100% blocks executed 100%
+      164:    9:string Oferta::getDenumire() const{
+      164:   10:    return this->denumire;
+      164:   10-block  0
+call    0 returned 164
+        -:   11:}
+        -:   12:
+        -:   13:/// Returneaza destinatia ofertei
+function _ZNK6Oferta13getDestinatieB5cxx11Ev called 169 returned 100% blocks executed 100%
+      169:   14:string Oferta::getDestinatie() const{
+      169:   15:    return this->destinatie;
+      169:   15-block  0
+call    0 returned 169
+        -:   16:}
+        -:   17:
+        -:   18:/// Returneaza tipul ofertei
+function _ZNK6Oferta6getTipB5cxx11Ev called 173 returned 100% blocks executed 100%
+      173:   19:string Oferta::getTip() const{
+      173:   20:    return this->tip;
+      173:   20-block  0
+call    0 returned 173
+        -:   21:}
+        -:   22:
+        -:   23:/// Returneaza pretul ofertei
+function _ZNK6Oferta7getPretEv called 170 returned 100% blocks executed 100%
+      170:   24:double Oferta::getPret() const{
+      170:   25:    return this->pret;
+      170:   25-block  0
+        -:   26:}
+        -:   27:
+        -:   28:/// Returneaza id-ul ofertei
+function _ZNK6Oferta5getIdEv called 232 returned 100% blocks executed 100%
+      232:   29:int Oferta::getId() const{
+      232:   30:    return this->id;
+      232:   30-block  0
+        -:   31:}
+        -:   32:
+        -:   33:/* --- Setters --- */
+        -:   34:
+        -:   35:/// Seteaza denumirea ofertei la denumireX
+        -:   36:/// @param denumireX : noua denumire a ofertei
+function _ZN6Oferta11setDenumireERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   37:void Oferta::setDenumire(const string& denumireX) {
+        1:   38:    this->denumire = denumireX;
+        1:   38-block  0
+call    0 returned 1
+        1:   39:}
+        -:   40:
+        -:   41:
+        -:   42:/// Seteaza destinatia ofertei la destinatieX
+        -:   43:/// @param destinatieX : noua destinatie a ofertei
+function _ZN6Oferta13setDestinatieERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   44:void Oferta::setDestinatie(const string& destinatieX) {
+        1:   45:    this->destinatie = destinatieX;
+        1:   45-block  0
+call    0 returned 1
+        1:   46:}
+        -:   47:
+        -:   48:
+        -:   49:/// Seteaza noul tip al ofertei la tipX
+        -:   50:/// @param tipX : noul tip al ofertei
+function _ZN6Oferta6setTipERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   51:void Oferta::setTip(const string& tipX) {
+        1:   52:    this->tip = tipX;
+        1:   52-block  0
+call    0 returned 1
+        1:   53:}
+        -:   54:
+        -:   55:/// Seteaza noul pret al ofertei la pretX
+        -:   56:/// @param pretX : noul pret al ofertei
+function _ZN6Oferta7setPretEd called 1 returned 100% blocks executed 100%
+        1:   57:void Oferta::setPret(const double pretX) {
+        1:   58:    this->pret = pretX;
+        1:   59:}
+        -:   60:
+        -:   61:/* --- Serializare+Deserializare pentru lucrul cu fisiere --- */
+        -:   62:
+        -:   63:/// Creeaza un nou obiect Oferta din linia de text
+        -:   64:/// @param line : linia de text
+        -:   65:/// @return un obiect Oferta
+function _ZN6Oferta11lineToTElemERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 67%
+        3:   66:Oferta Oferta::lineToTElem(const string& line) {
+        3:   67:    vector<string> params;
+        3:   67-block  0
+call    0 returned 3
+        3:   68:    size_t pos, prevPos = 0;
+       15:   69:    while ( (pos = line.find(',', prevPos)) != string::npos) {
+       15:   69-block  0
+call    0 returned 15
+branch  1 taken 12
+branch  2 taken 3 (fallthrough)
+       12:   70:        params.push_back(line.substr(prevPos, pos - prevPos));
+       12:   70-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
+branch  2 taken 0 (throw)
+       12:   70-block  1
+call    3 returned 12
+branch  4 taken 12 (fallthrough)
+branch  5 taken 0 (throw)
+       12:   70-block  2
+call    6 returned 12
+    $$$$$:   70-block  3
+call    7 never executed
+    $$$$$:   70-block  4
+       12:   71:        prevPos = pos + 1;
+        -:   72:    }
+        3:   73:    params.push_back(line.substr(prevPos));
+        3:   73-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   73-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   73-block  2
+call    6 returned 3
+    $$$$$:   73-block  3
+call    7 never executed
+    $$$$$:   73-block  4
+        6:   74:    return Oferta(params[0], params[1], params[2], stod(params[3]), stoi(params[4]));
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   74-block  0
+call    4 returned 3
+call    5 returned 3
+branch  6 taken 3 (fallthrough)
+branch  7 taken 0 (throw)
+        3:   74-block  1
+call    8 returned 3
+call    9 returned 3
+branch 10 taken 3 (fallthrough)
+branch 11 taken 0 (throw)
+        3:   74-block  2
+call   12 returned 3
+call   13 returned 3
+branch 14 taken 3 (fallthrough)
+branch 15 taken 0 (throw)
+        3:   74-block  3
+call   16 returned 3
+call   17 returned 3
+branch 18 taken 3 (fallthrough)
+branch 19 taken 0 (throw)
+        3:   74-block  4
+call   20 returned 3
+call   21 returned 3
+call   22 returned 3
+call   23 returned 3
+        3:   74-block  5
+    $$$$$:   74-block  6
+call   24 never executed
+    $$$$$:   74-block  7
+    $$$$$:   74-block  8
+call   25 never executed
+    $$$$$:   74-block  9
+        3:   75:}
+call    0 returned 3
+    $$$$$:   75-block  0
+call    1 never executed
+        -:   76:
+        -:   77:/// Creeaza o linie de text cu continutul ofertei
+        -:   78:/// @param ofertaX : un obiect Oferta
+        -:   79:/// @return linia de text
+function _ZN6Oferta11TElemToLineB5cxx11ERKS_ called 11 returned 100% blocks executed 47%
+       11:   80:string Oferta::TElemToLine(const Oferta& ofertaX) {
+       22:   81:    return ofertaX.getDenumire() + "," + ofertaX.getDestinatie() + "," + 
+       11:   81-block  0
+call    0 returned 11
+branch  1 taken 11 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   81-block  1
+call    3 returned 11
+branch  4 taken 11 (fallthrough)
+branch  5 taken 0 (throw)
+       11:   81-block  2
+call    6 returned 11
+branch  7 taken 11 (fallthrough)
+branch  8 taken 0 (throw)
+       11:   81-block  3
+call    9 returned 11
+branch 10 taken 11 (fallthrough)
+branch 11 taken 0 (throw)
+       11:   81-block  4
+call   12 returned 11
+branch 13 taken 11 (fallthrough)
+branch 14 taken 0 (throw)
+       11:   81-block  5
+call   15 returned 11
+branch 16 taken 11 (fallthrough)
+branch 17 taken 0 (throw)
+call   18 returned 11
+call   19 returned 11
+call   20 returned 11
+call   21 returned 11
+call   22 returned 11
+    $$$$$:   81-block  6
+call   23 never executed
+    $$$$$:   81-block  7
+    $$$$$:   81-block  8
+call   24 never executed
+    $$$$$:   81-block  9
+    $$$$$:   81-block 10
+call   25 never executed
+    $$$$$:   81-block 11
+    $$$$$:   81-block 12
+call   26 never executed
+    $$$$$:   81-block 13
+    $$$$$:   81-block 14
+call   27 never executed
+    $$$$$:   81-block 15
+    $$$$$:   81-block 16
+call   28 never executed
+    $$$$$:   81-block 17
+       44:   82:           ofertaX.getTip() + "," + to_string(ofertaX.getPret()) + "," + to_string(ofertaX.getId());
+       11:   82-block  0
+call    0 returned 11
+call    1 returned 11
+call    2 returned 11
+call    3 returned 11
+branch  4 taken 11 (fallthrough)
+branch  5 taken 0 (throw)
+       11:   82-block  1
+call    6 returned 11
+branch  7 taken 11 (fallthrough)
+branch  8 taken 0 (throw)
+       11:   82-block  2
+call    9 returned 11
+branch 10 taken 11 (fallthrough)
+branch 11 taken 0 (throw)
+       11:   82-block  3
+call   12 returned 11
+branch 13 taken 11 (fallthrough)
+branch 14 taken 0 (throw)
+       11:   82-block  4
+call   15 returned 11
+branch 16 taken 11 (fallthrough)
+branch 17 taken 0 (throw)
+       11:   82-block  5
+call   18 returned 11
+branch 19 taken 11 (fallthrough)
+branch 20 taken 0 (throw)
+       11:   82-block  6
+call   21 returned 11
+call   22 returned 11
+call   23 returned 11
+call   24 returned 11
+call   25 returned 11
+call   26 returned 11
+call   27 returned 11
+       11:   82-block  7
+    $$$$$:   82-block  8
+call   28 never executed
+    $$$$$:   82-block  9
+    $$$$$:   82-block 10
+call   29 never executed
+    $$$$$:   82-block 11
+    $$$$$:   82-block 12
+call   30 never executed
+    $$$$$:   82-block 13
+    $$$$$:   82-block 14
+call   31 never executed
+    $$$$$:   82-block 15
+    $$$$$:   82-block 16
+call   32 never executed
+    $$$$$:   82-block 17
+    $$$$$:   82-block 18
+call   33 never executed
+        -:   83:}

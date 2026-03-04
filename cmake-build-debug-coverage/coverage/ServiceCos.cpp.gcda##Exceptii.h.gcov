@@ -1,0 +1,44 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/Exceptii/Exceptii.h
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Service/ServiceCos/ServiceCos.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Service/ServiceCos/ServiceCos.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alxma on 4/24/2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef EXCEPTII_H
+        -:    6:#define EXCEPTII_H
+        -:    7:#include <string>
+        -:    8:using namespace std;
+        -:    9:
+        -:   10:class Exceptie{
+        -:   11:private:
+        -:   12:    string message;
+        -:   13:public:
+function _ZN8ExceptieC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   14:    explicit Exceptie(const string &message):message(message){}
+    %%%%%:   14-block  0
+call    0 never executed
+        -:   15:    const string& getMessage()const{
+        -:   16:        return message;
+        -:   17:    }
+        -:   18:};
+        -:   19:
+        -:   20:class ValidationError : public Exceptie{
+        -:   21:public:
+        -:   22:    explicit ValidationError(const string &message):Exceptie(message){}
+        -:   23:};
+        -:   24:
+        -:   25:class RepoError : public Exceptie{
+        -:   26:public:
+        -:   27:    explicit RepoError(const string &message):Exceptie(message){}
+        -:   28:};
+        -:   29:
+        -:   30:class ServiceError : public Exceptie{
+        -:   31:public:
+function _ZN12ServiceErrorC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   32:    explicit ServiceError(const string &message):Exceptie(message){}
+        1:   32-block  0
+call    0 returned 1
+        -:   33:};
+        -:   34:#endif //EXCEPTII_H

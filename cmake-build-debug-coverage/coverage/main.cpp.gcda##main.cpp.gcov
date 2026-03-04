@@ -1,0 +1,125 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/main.cpp
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/main.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1: /*
+        -:    2:  *===============================
+        -:    3:Lab 6-7
+        -:    4:Timp de lucru 2 săptămâni
+        -:    5:Cerințe generale:
+        -:    6:– Creați o aplicație C++, folosiți paradigma orientat obiect
+        -:    7:– Aplicația are interfața utilizator tip consola
+        -:    8:– Utilizați procesul de dezvoltare bazat pe funcționalități (Feature driven
+        -:    9:development). Identificați funcționalitățile și planificați-le pe doua iterații
+        -:   10:– Folosiți o arhitectură stratificata (UI / Services(GRASP Controller) / Repository).
+        -:   11:Creati clase pentru: Domain, Service, UI, Repository.
+        -:   12:– Toate funcțiile necesare vor fi specificate și testate. (Test Code Coverage >99% la
+        -:   13:toate modulele in afara de UI)
+        -:   14:– Fara warninguri (in Visual Studio warning level /W4, treat warning as errors)
+        -:   15:– Const Correctness: – folosiți calificativul const pentru variabile/parametrii care nu sunt modificați
+        -:   16:                     – folosiți calificativul const pentru metode care nu modifica starea obiectelor
+        -:   17:                     – transmiteți parametrii prin const & peste tot unde este posibil
+        -:   18:                     – evitați copierea obiectelor când nu este necesar.
+        -:   19:Iterație 1:
+        -:   20:    – Folosiți clasa std::string si clasa std::vector din STL (librăria standard C++)
+        -:   21:    – Nu folosiți pointeri.
+        -:   22:    – Nu alocați dinamic.
+        -:   23:Iterația 2:
+        -:   24:    – Înlocuiți clasa std::vector cu o clasa proprie parametrizata (Template) care
+        -:   25:        implementează o lista folosind structura de date lista înlănțuita sau vector
+        -:   26:        dinamic (la alegere).
+        -:   27:    – Validarea datelor. Utilizatorul este anunțat printr-un mesaj daca:  introduce
+        -:   28:        valori de intrare greșite; încearcă sa adauge o entitate de doua ori, încearcă
+        -:   29:        sa șteargă / modifice o entitate inexistenta (se vor folosi  excepții)
+        -:   30:    – Creați o diagramă UML a claselor pentru a schița arhitectura aplicației
+        -:   31:
+        -:   32:6 Agenție de turism
+        -:   33:Creați o aplicație care permite:
+        -:   34:· gestiunea unei liste de oferte turistice. Oferta: denumire, destinație, tip, preț
+        -:   35:· adăugare, ștergere, modificare și afișare  oferte turistice
+        -:   36:· căutare oferta
+        -:   37:· filtrare oferte turistice după: destinație, preț
+        -:   38:· sortare oferte după: denumire, destinație, tip + preț
+        -:   39:=====================================
+        -:   40:Lab 8-9
+        -:   41:Timp de lucru 2 săptămâni
+        -:   42:    Cerințe generale:
+        -:   43:• Fără memory leak.
+        -:   44:• Test Code Coerage >99% pe tot codul in afara de UI
+        -:   45:• Compilatorul setat la „treat Warning as Errors”, Warning Level /W4
+        -:   46:• Soluționat majoritatea erorilor raportate de linter: Activat „code analysis on
+        -:   47:    build” selectat „"C++ Core Check rules". Va încurajez ca la fiecare
+        -:   48:    eroare/sugestie raportata sa citiți partea relevanta din guidline (eroarea din VS
+        -:   49:    oferă un link către secțiune), este e metoda buna pentru a explora limbajul
+        -:   50:    C++. Daca va merge greu compilarea puteți sa activați doar din când in când
+        -:   51:    analiza pentru a vedea ce erori raportează.
+        -:   52:
+        -:   53:    Cerințe Iterația 1:
+        -:   54:    • Modificați aplicația: folosiți clasa vector din STL si înlocuiți toate for-urile din
+        -:   55:aplicație cu algoritmi din STL si varianta c++11 de for (range for).  Exemplu
+        -:   56:de algoritmi:  copy_if (la filtrare), find_if (căutare), sort
+        -:   57:    • Folosiți excepții pentru a raporta erori (creați clase proprii pentru excepții).
+        -:   58:    • Adăugați funcționalitatea noua (descris la fiecare problema).
+        -:   59:    • Pentru a alege aleator elemente puteți folosi:
+        -:   60:#include <random>
+        -:   61:std::mt19937 mt{ std::random_device{}() };
+        -:   62:std::uniform_int_distribution<> dist(0, v.size()-1);
+        -:   63:int rndNr = dist(mt);// numar aleator intre [0,size-1]
+        -:   64:#include <algorithm>
+        -:   65:#include <random>
+        -:   66:#include <chrono>
+        -:   67:// std::default_random_engine
+        -:   68:// std::chrono::system_clock
+        -:   69:auto seed = std::chrono::system_clock::now().time_since_epoch().count();
+        -:   70:std::shuffle(v.begin(),v.end(), std::default_random_engine(seed)); //amesteca vectorul v
+        -:   71:
+        -:   72:    Cerințe Iterația 2:
+        -:   73:    Adăugați partea cu salvarea in fișiere pentru produse/filme/cărți, etc.
+        -:   74:    Adăugați posibilitatea de undo pentru operațiile: adaugă, șterge si modifică.
+        -:   75:    Pentru implementare folosiți moștenire si polimorfism:
+        -:   76:    • Creați o clasa abstracta ActiuneUndo care are o singura metoda: doUndo.
+        -:   77:    • Creați 3 clase derivate UndoAdauga, UndoSterge, UndoModifica care in
+        -:   78:        metoda doUndo implementează partea care reface situația de dinaintea
+        -:   79:        adăugării/ștergerii/modificării.
+        -:   80:    • In controller se v-a tine o lista de ActiuniUndo care se pot executa in orice
+        -:   81:        moment. Se va face un apel polimorfic la metoda doUndo.
+        -:   82:    • Acordați atenție gestiunii memoriei, evitați fenomenul de slicing.
+        -:   83:
+        -:   84:
+        -:   85:6 Agenție de turism
+        -:   86:Introduceți posibilitatea de a crea un wishlist. Utilizatorul poate crea interactiv o lista
+        -:   87:de destinații pe care dorește sa le viziteze.
+        -:   88:Adăugați următoarele acțiuni (elemente de meniu):
+        -:   89:• Golește cos: șterge toate ofertele din cos.
+        -:   90:• Adaugă in cos:  adaugă in cos o oferta turistica după denumire
+        -:   91:• Generează cos: utilizatorul introduce numărul total de oferte, coșul se
+        -:   92:populează aleator cu oferte turistice
+        -:   93:• Export. Salvează cos in fișier : CVS sau HTML. Se face salvarea in fișier doar
+        -:   94:când s-a selectat acest meniu, coșul nu este persistent (la repornire aplicație
+        -:   95:coșul este din nou gol) , utilizatorul introduce numele fișierului unde se
+        -:   96:salvează la fiecare export.
+        -:   97:După fiecare acțiune utilizator se afișează numărul total al ofertelor din cos.
+        -:   98:*/
+        -:   99:#include <bits/stdc++.h>
+        -:  100:
+        -:  101://#include "Repository.h"
+        -:  102:#include "FileRepository.h"
+        -:  103:#include "Service/ServiceOferta/ServiceOferta.h"
+        -:  104:#include "ServiceCos/ServiceCos.h"
+        -:  105:#include "Teste/Teste.h"
+        -:  106:#include "UI/Consola.h"
+        -:  107:
+        -:  108:using namespace std;
+        -:  109:
+function main called 1 returned 100% blocks executed 100%
+        1:  110:int main() {
+        1:  111:    Teste::testAll();
+        1:  111-block  0
+call    0 returned 1
+        -:  112:    /*FileRepository<Oferta> repoOferta{"../Exports/data.txt"};
+        -:  113:    ServiceOferta serviceOferta{repoOferta};
+        -:  114:    ServiceCos serviceCos{repoOferta};
+        -:  115:    Consola consola{repoOferta, serviceOferta, serviceCos};
+        -:  116:    consola.runConsola();*/
+        1:  117:    return 0;
+        -:  118:}

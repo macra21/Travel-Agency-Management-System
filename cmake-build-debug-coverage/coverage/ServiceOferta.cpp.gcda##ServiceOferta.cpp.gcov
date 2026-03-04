@@ -1,0 +1,317 @@
+        -:    0:Source:/mnt/d/Facultate/OOP/Lab6-11/Service/ServiceOferta/ServiceOferta.cpp
+        -:    0:Graph:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Service/ServiceOferta/ServiceOferta.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/OOP/Lab6-11/cmake-build-debug-coverage/CMakeFiles/Lab6_11.dir/Service/ServiceOferta/ServiceOferta.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by alxma on 4/25/2025.
+        -:    3://
+        -:    4:
+        -:    5:#include "ServiceOferta.h"
+        -:    6:
+        -:    7:#include "ValidatorOferta.h"
+        -:    8:
+        -:    9:/* --- Operatii CRUD --- */
+        -:   10:
+        -:   11:/// Adauga o oferta in repository, dupa validare.
+        -:   12:/// @param ofertaX Oferta ce trebuie adaugata
+        -:   13:/// @throw ValidationError daca validarea ofertei esueaza
+        -:   14:/// @throw RepoError daca oferta exista deja in repository
+function _ZN13ServiceOferta19serviceAdaugaOfertaERK6Oferta called 10 returned 80% blocks executed 100%
+       10:   15:void ServiceOferta::serviceAdaugaOferta(const Oferta& ofertaX) {
+       10:   16:    ValidatorOferta::valideazaOferta(ofertaX);
+       10:   16-block  0
+call    0 returned 9
+        9:   17:    this->repoOferta.repoAdaugaElem(ofertaX);
+call    0 returned 8
+        8:   18:}
+        -:   19:
+        -:   20:/// Modifica o oferta in repository, dupa verificare
+        -:   21:/// @param ofertaX Oferta ce se modifica
+        -:   22:/// @throw ValidationError daca validarea ofertei esueaza
+        -:   23:/// @throw RepoError daca oferta nu exista in repository
+function _ZN13ServiceOferta21serviceModificaOfertaERK6Oferta called 3 returned 33% blocks executed 100%
+        3:   24:void ServiceOferta::serviceModificaOferta(const Oferta& ofertaX) {
+        3:   25:    ValidatorOferta::valideazaOferta(ofertaX);
+        3:   25-block  0
+call    0 returned 2
+        2:   26:    this->repoOferta.repoModificaElem(ofertaX);
+call    0 returned 1
+        1:   27:}
+        -:   28:
+        -:   29:/// Cauta o oferta in repository
+        -:   30:/// @param id Id-ul ofertei ce este cautata
+        -:   31:/// @return oferta, daca aceasta exista in repository
+        -:   32:/// @throw RepoError daca oferta nu exista in repository
+function _ZNK13ServiceOferta18serviceCautaOfertaEi called 3 returned 67% blocks executed 100%
+        3:   33:Oferta ServiceOferta::serviceCautaOferta(int id) const {
+        3:   34:    return this->repoOferta.repoCautaElem(id);
+        3:   34-block  0
+call    0 returned 2
+        -:   35:}
+        -:   36:
+        -:   37:/// Sterge o oferta din repository
+        -:   38:/// @param id Id-ul ofertei ce se sterge
+        -:   39:/// @throw RepoError daca oferta nu exista in repository
+function _ZN13ServiceOferta19serviceStergeOfertaEi called 2 returned 50% blocks executed 100%
+        2:   40:void ServiceOferta::serviceStergeOferta(int id) {
+        2:   41:    this->repoOferta.repoStergeElem(id);
+        2:   41-block  0
+call    0 returned 1
+        1:   42:}
+        -:   43:
+        -:   44:/* --- Filtrare --- */
+        -:   45:
+        -:   46:/// Filtreaza oferte dupa destinatie
+        -:   47:/// @return vector<Oferta> cu ofertele filtrate
+function _ZNK13ServiceOferta36serviceFiltreazaDupaDestinatieOfertaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 73%
+        2:   48:vector<Oferta> ServiceOferta::serviceFiltreazaDupaDestinatieOferta(const string &destinatie) const {
+        2:   49:    vector<Oferta> rezultat;
+        2:   49-block  0
+call    0 returned 2
+        2:   50:    auto oferte = this->repoOferta.repoGetAllElems();
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   51:    
+        2:   52:    copy_if(oferte.begin(), oferte.end(), back_inserter(rezultat), 
+        2:   52-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   52-block  1
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+function _ZZNK13ServiceOferta36serviceFiltreazaDupaDestinatieOfertaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK6OfertaE_clESA_ called 6 returned 100% blocks executed 100%
+        6:   53:            [&destinatie](const Oferta& oferta) {
+        6:   54:                return oferta.getDestinatie() == destinatie;
+        6:   54-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+        -:   55:            });
+        -:   56:    
+        4:   57:    return rezultat;
+        2:   57-block  0
+        2:   57-block  1
+        2:   58:}
+        2:   58-block  0
+call    0 returned 2
+    $$$$$:   58-block  1
+call    1 never executed
+    $$$$$:   58-block  2
+call    2 never executed
+        -:   59:
+        -:   60:/// Filtreaza oferte dupa pret
+        -:   61:/// @return vector<Oferta> cu ofertele filtrate
+function _ZNK13ServiceOferta30serviceFiltreazaDupaPretOfertaEdd called 1 returned 100% blocks executed 73%
+        1:   62:vector<Oferta> ServiceOferta::serviceFiltreazaDupaPretOferta(double pretMin, double pretMax) const {
+        1:   63:    vector<Oferta> rezultat;
+        1:   63-block  0
+call    0 returned 1
+        1:   64:    auto oferte = repoOferta.repoGetAllElems();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   65:    
+        1:   66:    copy_if(oferte.begin(), oferte.end(), back_inserter(rezultat), 
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   66-block  1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+function _ZZNK13ServiceOferta30serviceFiltreazaDupaPretOfertaEddENKUlRK6OfertaE_clES2_ called 3 returned 100% blocks executed 100%
+        8:   67:            [pretMin, pretMax](const Oferta& oferta) {
+        3:   68:                return oferta.getPret() >= pretMin && oferta.getPret() <= pretMax;
+        3:   68-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
+        2:   68-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0
+        2:   68-block  2
+        1:   68-block  3
+        3:   68-block  4
+        -:   69:            });
+        -:   70:    
+        2:   71:    return rezultat;
+        1:   71-block  0
+        1:   71-block  1
+        1:   72:}
+        1:   72-block  0
+call    0 returned 1
+    $$$$$:   72-block  1
+call    1 never executed
+    $$$$$:   72-block  2
+call    2 never executed
+        -:   73:
+        -:   74:/* --- Sortare --- */
+        -:   75:
+        -:   76:/// Sorteaza ofertele dupa denumire(mod=1), destinație(mod=2), tip + preț(mod=3)
+        -:   77:/// @param mod Modul de sortare
+function _ZN13ServiceOferta20serviceSortareOfertaEi called 3 returned 100% blocks executed 89%
+        3:   78:void ServiceOferta::serviceSortareOferta(int mod) {
+        3:   79:    vector<Oferta> oferteSortate = this->repoOferta.repoGetAllElems();
+        3:   79-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   80:    if (mod == 1){
+        3:   80-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   81:        sort(oferteSortate.begin(), oferteSortate.end(),
+        1:   81-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN13ServiceOferta20serviceSortareOfertaEiENKUlRK6OfertaS2_E_clES2_S2_ called 4 returned 100% blocks executed 77%
+        4:   82:            [](const Oferta& oferta1, const Oferta& oferta2) {
+        4:   83:                return oferta1.getDenumire() < oferta2.getDenumire();
+        4:   83-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   83-block  1
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:   83-block  2
+call    7 returned 4
+call    8 returned 4
+call    9 returned 4
+call   10 returned 4
+        4:   83-block  3
+    $$$$$:   83-block  4
+call   11 never executed
+    $$$$$:   83-block  5
+        -:   84:            });
+        -:   85:    }
+        3:   86:    if (mod == 2) {
+        3:   86-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   87:        sort(oferteSortate.begin(), oferteSortate.end(),
+        1:   87-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN13ServiceOferta20serviceSortareOfertaEiENKUlRK6OfertaS2_E0_clES2_S2_ called 3 returned 100% blocks executed 77%
+        3:   88:            [](const Oferta& oferta1, const Oferta& oferta2) {
+        3:   89:                return oferta1.getDestinatie() < oferta2.getDestinatie();
+        3:   89-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   89-block  1
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   89-block  2
+call    7 returned 3
+call    8 returned 3
+call    9 returned 3
+call   10 returned 3
+        3:   89-block  3
+    $$$$$:   89-block  4
+call   11 never executed
+    $$$$$:   89-block  5
+        -:   90:            });
+        -:   91:    }
+        3:   92:    if (mod == 3) {
+        3:   92-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   93:        sort(oferteSortate.begin(), oferteSortate.end(),
+        1:   93-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN13ServiceOferta20serviceSortareOfertaEiENKUlRK6OfertaS2_E1_clES2_S2_ called 5 returned 100% blocks executed 76%
+        5:   94:            [](const Oferta& oferta1, const Oferta& oferta2) {
+        5:   95:                if (oferta1.getTip() == oferta2.getTip())
+        5:   95-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:   95-block  1
+call    4 returned 5
+call    5 returned 5
+call    6 returned 5
+branch  7 taken 3 (fallthrough)
+branch  8 taken 2
+    $$$$$:   95-block  2
+call    9 never executed
+    $$$$$:   95-block  3
+call   10 never executed
+        3:   96:                    return oferta1.getPret() < oferta2.getPret();
+        3:   96-block  0
+call    0 returned 3
+call    1 returned 3
+        2:   97:                return oferta1.getTip() < oferta2.getTip();
+        2:   97-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   97-block  1
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   97-block  2
+call    7 returned 2
+call    8 returned 2
+call    9 returned 2
+call   10 returned 2
+    $$$$$:   97-block  3
+call   11 never executed
+    $$$$$:   97-block  4
+        -:   98:            });
+        -:   99:    }
+        3:  100:    this->repoOferta.repoSetAllElems(oferteSortate);
+        3:  100-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  101:}
+        3:  101-block  0
+call    0 returned 3
+    $$$$$:  101-block  1
+call    1 never executed
+        -:  102:
+        -:  103:/* --- Operatii extra --- */
+        -:  104:
+        -:  105:/// Returneaza toate ofertele din repository
+function _ZNK13ServiceOferta19serviceGetAllOferteEv called 7 returned 100% blocks executed 100%
+        7:  106:vector<Oferta> ServiceOferta::serviceGetAllOferte() const {
+        7:  107:    return this->repoOferta.repoGetAllElems();
+        7:  107-block  0
+call    0 returned 7
+        -:  108:}
+        -:  109:
+        -:  110:/// Elementele din repository devin elemsX
+        -:  111:/// @param oferteX noile elemente din repository
+function _ZNK13ServiceOferta19serviceSetAllOferteERKSt6vectorI6OfertaSaIS1_EE called 1 returned 100% blocks executed 100%
+        1:  112:void ServiceOferta::serviceSetAllOferte(const vector<Oferta>& oferteX) const {
+        1:  113:    this->repoOferta.repoSetAllElems(oferteX);
+        1:  113-block  0
+call    0 returned 1
+        1:  114:}
